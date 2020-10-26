@@ -1,0 +1,176 @@
+@import url('https://fonts.googleapis.com/css2?family=Kanit:ital,wght@0,400;0,600;0,800;1,500&display=swap');
+*,
+*::before,
+*::after {
+	box-sizing: border-box;
+}
+
+html,
+body {
+	height: 100%;
+	width: 100%;
+}
+
+body {
+	margin: 0;
+	background-color: #0f1118;
+	color: #d8d8d8e6;
+	font-family: 'Kanit', sans-serif;
+}
+
+#mathGame {
+	width: 70%;
+	text-align: center;
+	margin: 0 auto;
+}
+@media (max-width: 768px) {
+	#mathGame {
+    width: 95% !important;
+  }
+}
+#gameCore {
+	padding: 20px;
+	background-color: #13161e;
+	border-radius: 4px;
+	box-shadow: 0 10px 12px rgba(0, 0, 0, 0.08);
+}
+
+.gameCoreWrapper {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+.buttonWrapper {
+  border-bottom: 2px solid #282e3b;
+  padding: 20px 0;
+}
+
+#mathOperator,
+#equalSign {
+	font-size: 40px;
+	color: #fff;
+	opacity: 0.3;
+}
+
+#primaryNumber,
+#secondaryNumber {
+	padding: 20px;
+	border: 2px solid #8296f4;
+	border-radius: 10px;
+	margin: 0 10px;
+}
+
+.guessNumb {
+	font-family: 'Kanit', sans-serif;
+	font-size: 12px;
+	font-weight: 600;
+	letter-spacing: 0.6px;
+	color: #d8d8d8e6;
+	display: block;
+	margin: 0 20px;
+	background: #1e222f;
+	border-radius: 4px;
+	padding: 20px;
+	border: 1px solid transparent;
+	outline: none;
+	-webkit-transition: .125s;
+	-o-transition: .125s;
+	transition: .125s;
+}
+
+.guessNumb:focus {
+	border-color: #f6deab;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+	-webkit-appearance: none;
+	margin: 0;
+}
+
+.custom-button {
+	cursor: pointer;
+	font-family: 'Kanit', sans-serif;
+	outline: none;
+	background: #8296f4;
+	border: none;
+	color: #ffffff;
+	border-radius: 7px;
+	margin: 0 5px;
+	padding: 8px;
+	letter-spacing: 5px;
+	font-size: 16px;
+	-webkit-transition: .125s;
+	-o-transition: .125s;
+	transition: .125s;
+}
+
+.statsBtn {
+	background: #596174;
+}
+
+.statsBtn:hover {
+	background: #323c54 !important;
+}
+
+.custom-button:hover {
+	background: #5f6fb9;
+}
+
+.gameHistoryWrapper {
+	display: flex;
+	justify-content: space-between;
+	width: 60%;
+	margin: 0 auto;
+}
+
+#gameHistoryWins,
+#gameHistoryStats,
+#gameHistoryLoses {
+	width: 33%;
+}
+
+.gameHistoryWrapper li {
+	display: flex;
+	place-content: space-between;
+	padding: 15px 0;
+	color: #f4ad8d;
+	font-size: 18px;
+	border-bottom: 2px solid #282e3b;
+}
+
+.gameHistoryWrapper span {
+	background: #1e222f;
+	font-size: 13px;
+	padding: 4px;
+	margin: 0 10px;
+	border-radius: 10px;
+}
+
+#gameHistoryWins span {
+	color: #37d87b;
+}
+
+#gameHistoryLoses span {
+	color: #f88686;
+}
+@media (max-width: 1440px) {
+  .gameHistoryWrapper {
+    width: 100%;
+  }
+}
+@media (max-width: 667px) {
+	.gameCoreWrapper, .gameHistoryWrapper {
+    flex-flow: column;
+  }
+  .custom-button {
+    margin: 10px 5px;
+  }
+  #gameHistoryWins, #gameHistoryStats, #gameHistoryLoses {
+    width: 100%;
+  }
+  #gameHistoryLoses li {
+    border-bottom: none !important;
+    border-top: 2px solid #282e3b;
+  }
+}

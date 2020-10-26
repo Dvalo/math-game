@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Math Game</title>
+
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+  <div id="mathGame">
+    <div class="instructions">
+       <h1>Math Game</h1>
+       <p>A random math equation (Work in progress)</p>
+       <p>Try to answer math equations and see how you did!</p>
+    </div>
+    <div id="gameCore">
+       <div class="gameCoreWrapper">
+          <div id="primaryNumber"></div>
+          <div id="mathOperator"></div>
+          <div id="secondaryNumber"></div>
+          <div id="equalSign">=</div>
+          <input type="number" id="guessNumb" class="guessNumb">
+       </div>
+       <div class="buttonWrapper">
+          <button type="submit" id="guessSubmit" class="custom-button">Check Answer</button>
+          <button type="button" id="resetStats" class="custom-button statsBtn">Reset Stats</button>
+        </div>
+       <div class="gameHistoryWrapper">
+          <div id="gameHistoryWins"></div>
+          <div id="gameHistoryStats">
+             <p class="correctCount">Correct answers: 0</p>
+             <p class="incorrectCount">Incorrect answers: 0</p>
+          </div>
+          <div id="gameHistoryLoses"></div>
+       </div>
+    </div>
+  </div>
+
+   <script src="js/app.js"></script>
+
+</body>
+
+</html>
